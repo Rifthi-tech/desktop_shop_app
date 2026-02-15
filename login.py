@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import messagebox
 from db import get_connection
 import admin
-import customer
+import customer  # Ensure customer.py has open_customer defined
 
 def login_user():
     username = entry_username.get()
@@ -30,8 +30,6 @@ def login_user():
     except Exception as e:
         messagebox.showerror("Database Error", str(e))
 
-
-# CREATE WINDOW OUTSIDE FUNCTION
 root = tk.Tk()
 root.title("Login")
 root.geometry("300x200")
